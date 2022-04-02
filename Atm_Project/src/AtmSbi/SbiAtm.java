@@ -21,18 +21,25 @@ public class SbiAtm {
     	 case 1:
     		 System.out.println("Enter money to be withdrawn");
     		 withdraw=sc.nextInt();
+            //check whether the balance is greater than or equal to the withdrawal amount  
     		 if(balance>=withdraw) {
+                
+                //remove the withdrawl amount from the total balance
     			 balance=balance-withdraw;
     			 System.out.println("Please collect your cash");
     		 }
     		 else {
+                
+               //show custom error message 
     			 System.out.println("Insufficient Fund..");
     		 }
     		 System.out.println("");
     		 break;
     	 case 2:
     		 System.out.println("Enter money to be Deposite");
+           //get deposite amount from te user 
     		 deposit=sc.nextInt();
+           //add the deposit amount to the total balanace   
     		 balance=balance+deposit;
     		 System.out.println("Your money has been succesfully deposit");
     		 System.out.println("");
